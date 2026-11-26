@@ -4,9 +4,11 @@
   "description": "Agent-side HTTP message signing (signRequest, mandatedFetch) and a chunk renewal runner (Renewer) for task-mandate.",
   "license": "Apache-2.0",
   "type": "module",
-  "repository": "https://github.com/repairer5812/task-mandate",
+  "repository": { "type": "git", "url": "git+https://github.com/repairer5812/task-mandate.git", "directory": "packages/agent" },
   "files": ["dist", "README.md", "LICENSE"],
   "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
   "scripts": { "build": "tsc -p tsconfig.build.json" },
-  "dependencies": { "@task-mandate/core": "workspace:*", "http-message-sig": "0.3.0", "web-bot-auth": "0.2.0" }
+  "dependencies": { "@task-mandate/core": "workspace:*", "http-message-sig": "0.3.0", "web-bot-auth": "0.2.0" },
+  "homepage": "https://github.com/repairer5812/task-mandate#readme",
+  "bugs": { "url": "https://github.com/repairer5812/task-mandate/issues" }
 }

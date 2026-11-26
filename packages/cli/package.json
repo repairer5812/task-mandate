@@ -4,10 +4,12 @@
   "description": "Command-line tool (tm) for task-mandate: key generation, mandate issuance and inspection, chunked delegation, and mock identity provider attestations.",
   "license": "Apache-2.0",
   "type": "module",
-  "repository": "https://github.com/repairer5812/task-mandate",
+  "repository": { "type": "git", "url": "git+https://github.com/repairer5812/task-mandate.git", "directory": "packages/cli" },
   "files": ["dist", "README.md", "LICENSE"],
   "bin": { "tm": "./dist/cli.js" },
   "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
   "scripts": { "build": "tsc -p tsconfig.build.json" },
-  "dependencies": { "@task-mandate/agent": "workspace:*", "@task-mandate/core": "workspace:*" }
+  "dependencies": { "@task-mandate/agent": "workspace:*", "@task-mandate/core": "workspace:*" },
+  "homepage": "https://github.com/repairer5812/task-mandate#readme",
+  "bugs": { "url": "https://github.com/repairer5812/task-mandate/issues" }
 }

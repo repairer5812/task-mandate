@@ -1,4 +1,5 @@
 # task-mandate
+English | [한국어](README.ko.md)
 
 A person gives one AI agent permission to do one task on one website, for a limited time and a limited number of actions. The website checks that permission on its own, without calling anyone.
 
@@ -8,7 +9,6 @@ Status: experimental research code, version 0.1. Not for production use. The cod
 
 - Specification: [docs/SPEC.md](docs/SPEC.md) ([Korean](docs/SPEC.ko.md))
 - Demo: https://task-mandate-demo.repairer5812.workers.dev/sim (voice delegation to a mock civil-service counter; nothing real is filed)
-- Korean README: [README.ko.md](README.ko.md)
 
 ## How it works
 
