@@ -2,6 +2,8 @@
 
 The demos use the Task Mandate verifier for test reservations and mock civil-service applications. They do not book real facilities or file real applications.
 
+Use the [public API quickstart](../examples/agent-sandbox/README.md) to test with an AI agent or a Node.js client.
+
 ## Reservation site
 
 `GET /slots` lists facilities and remaining seats. `POST /reserve` accepts a JSON body such as `{"facility":"court-3"}`. The route requires a mandate of type `reserve` whose resource equals the facility in the body. That match is checked before an action is counted or a person slot is claimed. An unknown or full facility is found after verification: the action is refunded, and the slot claim stays. It returns 404 for an unknown facility, 409 for a full facility, or 200 with the remaining seat count on success.

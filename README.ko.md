@@ -9,6 +9,7 @@ task-mandate는 기존 표준을 묶은 프로파일이다. 위임장은 SD-JWT 
 
 - 명세: [docs/SPEC.ko.md](docs/SPEC.ko.md) (영어 원문: [docs/SPEC.md](docs/SPEC.md))
 - 데모: https://task-mandate-demo.repairer5812.workers.dev/sim (모의 민원 창구에 음성으로 위임한다. 실제 민원은 접수하지 않는다)
+- [AI 에이전트로 테스트하기](examples/agent-sandbox/README.ko.md). npm 패키지로 공개 모의 API에 요청을 보냅니다.
 
 ## 작동 방식
 

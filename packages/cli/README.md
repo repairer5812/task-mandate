@@ -4,6 +4,8 @@ Command-line tool (`tm`) for `task-mandate`: Ed25519 key generation, single-mand
 
 Experimental research implementation (0.1). Not for production.
 
+[Test with an AI agent](https://github.com/repairer5812/task-mandate/tree/main/examples/agent-sandbox) using the public mock API.
+
 ## Install
 
 ```bash

@@ -9,6 +9,7 @@ Status: experimental research code, version 0.1. Not for production use. The cod
 
 - Specification: [docs/SPEC.md](docs/SPEC.md) ([Korean](docs/SPEC.ko.md))
 - Demo: https://task-mandate-demo.repairer5812.workers.dev/sim (voice delegation to a mock civil-service counter; nothing real is filed)
+- [Test with an AI agent](examples/agent-sandbox/README.md) using npm and the public mock API.
 
 ## How it works
 

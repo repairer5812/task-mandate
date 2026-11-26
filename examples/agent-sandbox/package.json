@@ -1,0 +1,1 @@
+{ "name": "task-mandate-public-sandbox-example", "private": true, "type": "module", "engines": { "node": ">=22" }, "scripts": { "test": "node run.mjs" }, "dependencies": { "@task-mandate/agent": "0.1.0", "@task-mandate/core": "0.1.0" } }

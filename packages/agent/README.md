@@ -4,6 +4,8 @@ Agent-side HTTP message signing (`signRequest`, `mandatedFetch`) and chunk renew
 
 Experimental research implementation (0.1). Not for production.
 
+[Test with an AI agent](https://github.com/repairer5812/task-mandate/tree/main/examples/agent-sandbox) using the public mock API.
+
 ## Install
 
 ```bash

@@ -1,0 +1,1 @@
+{ "origin": "https://task-mandate-demo.repairer5812.workers.dev", "endpoints": { "services": "/civil/services", "attest": "/sim/attest", "apply": "/civil/apply" }, "service": "resident-copy", "durationSec": 120, "maxActions": 1 }
