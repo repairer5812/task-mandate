@@ -1,0 +1,37 @@
+{
+  "measuredAt": "2026-11-25T00:48:06.238Z",
+  "node": "v26.13.1",
+  "cpu": "AMD Ryzen 7 9800X3D 8-Core Processor",
+  "iterations": 5,
+  "target": "local",
+  "colo": null,
+  "chunkSec": 30,
+  "clockSkewSec": 30,
+  "boundSec": 60,
+  "unit": "s",
+  "note": "The local run advances a fake clock by 1 second. Requests are also 1 second apart, so an observation can be up to 1 second above the theoretical bound. The bound is chunk + clockSkewSec.",
+  "samples": [
+    {
+      "stopOffsetSec": 17,
+      "latencySec": 59
+    },
+    {
+      "stopOffsetSec": 23,
+      "latencySec": 53
+    },
+    {
+      "stopOffsetSec": 7,
+      "latencySec": 54
+    },
+    {
+      "stopOffsetSec": 3,
+      "latencySec": 58
+    },
+    {
+      "stopOffsetSec": 29,
+      "latencySec": 47
+    }
+  ],
+  "maxLatencySec": 59,
+  "meanLatencySec": 54.2
+}

@@ -1,0 +1,67 @@
+{
+  "startedAt": "2026-11-26T02:50:41.788Z",
+  "finishedAt": "2026-11-26T02:52:35.012Z",
+  "elapsedMs": 113224,
+  "originHost": "127.0.0.1",
+  "minSwitchSec": 20,
+  "chunkSec": 40,
+  "renewSpanSec": 120,
+  "storeMeasured": false,
+  "note": "Durable Object store size was not measured. Memory store growth is checked only in the in-process test.",
+  "repeats": 20,
+  "concurrency": {
+    "burst": {
+      "sent": 50,
+      "allows": 7,
+      "codes": {
+        "http-429": 30,
+        "LIMIT_EXCEEDED": 13,
+        "allow": 7
+      },
+      "maxActions": 7
+    },
+    "nonce": {
+      "sent": 2,
+      "allows": 1,
+      "codes": {
+        "allow": 1,
+        "REPLAY": 1
+      }
+    },
+    "person": {
+      "sent": 2,
+      "allows": 1,
+      "codes": {
+        "allow": 1,
+        "SUPERSEDED": 1
+      }
+    },
+    "violations": []
+  },
+  "violationCount": 0,
+  "scenario": {
+    "requests": 15,
+    "allows": 11,
+    "denies": 4,
+    "reasons": {
+      "allow": 11,
+      "SUPERSEDED": 3,
+      "EXPIRED": 1
+    },
+    "violationCount": 0,
+    "violations": [],
+    "legitimate": {
+      "person slot": {
+        "SUPERSEDED": 3
+      },
+      "expiry": {
+        "EXPIRED": 1
+      }
+    },
+    "bugCandidate": {},
+    "latencyMs": {
+      "p50": 7.126799999998184,
+      "p95": 9.452390999998897
+    }
+  }
+}

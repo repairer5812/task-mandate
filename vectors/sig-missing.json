@@ -1,0 +1,30 @@
+{
+  "config": {
+    "origin": "https://court.example"
+  },
+  "name": "sig-missing",
+  "now": "2026-12-01T00:00:00.000Z",
+  "route": {
+    "requireTask": {
+      "resource": "court-3",
+      "type": "reserve"
+    }
+  },
+  "steps": [
+    {
+      "expected": {
+        "code": "SIG_MISSING",
+        "decision": "deny"
+      },
+      "request": {
+        "body": "{\"facility\":\"court-3\"}",
+        "headers": {
+          "agent-mandate": "eyJ0eXAiOiJkYytzZC1qd3QiLCJqd2siOnsia3R5IjoiT0tQIiwiY3J2IjoiRWQyNTUxOSIsIngiOiJzNGdwTThEc0Zhd0k4RERQOTdTcXNSUXFJTFZHSG05bE1CWThUNDB0em9JIn0sImFsZyI6IkVkRFNBIn0.eyJ2Y3QiOiJ1cm46dGFzay1tYW5kYXRlOnYwIiwiaXNzIjoidXJuOmp3ay10aHVtYnByaW50OnNoYS0yNTY6Nmg2QktxSWxvYUhHRWFHY21NZWpqeEhadDF5SmRTM0xkWUFpemozYXZEOCIsInN1YiI6InVybjpqd2stdGh1bWJwcmludDpzaGEtMjU2OjZoNkJLcUlsb2FIR0VhR2NtTWVqanhIWnQxeUpkUzNMZFlBaXpqM2F2RDgiLCJhdWQiOiJodHRwczovL2NvdXJ0LmV4YW1wbGUiLCJjbmYiOnsiandrIjp7Imt0eSI6Ik9LUCIsImNydiI6IkVkMjU1MTkiLCJ4IjoiSnJRTGo1UF84OWlYRVM5LXZGZ3JJeTI5Y2xGOUNDX29QUHN3M2M1RDBicyJ9fSwidGFzayI6eyJ0eXBlIjoicmVzZXJ2ZSIsInJlc291cmNlIjoiY291cnQtMyJ9LCJpYXQiOjE3OTYwODMyMDAsIm5iZiI6MTc5NjA4MzIwMCwiZXhwIjoxNzk2MDg1MDAwLCJqdGkiOiJ0SnhlVXI3WHVFQjUwNjFqa2ltb0V3IiwibGltaXRzIjp7Im1heEFjdGlvbnMiOjJ9fQ.aEW7tmIlz_e7CAnj44g8NDErG0ptQ_q7kv-7vVHpj3eB54E9iv60yIkzrOOCtEbQKlc86sRbl-zv_GrX8VzLCw~",
+          "content-type": "application/json"
+        },
+        "method": "POST",
+        "url": "https://court.example/reserve"
+      }
+    }
+  ]
+}

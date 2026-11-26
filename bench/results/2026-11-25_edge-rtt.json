@@ -1,0 +1,29 @@
+{
+  "measuredAt": "2026-11-25T00:48:57.471Z",
+  "node": "v26.13.1",
+  "cpu": "AMD Ryzen 7 9800X3D 8-Core Processor",
+  "iterations": 200,
+  "intervalMs": 50,
+  "target": "http://127.0.0.1:8787",
+  "colo": null,
+  "unit": "ms",
+  "note": "slots p50 subtracted from reserve p50 approximates time spent in verification and the store. The round trip also includes the network and serialization.",
+  "slots": {
+    "p50": 7.373,
+    "p95": 8.249,
+    "status": {
+      "200": 200
+    }
+  },
+  "reserve": {
+    "p50": 21.384,
+    "p95": 24.462,
+    "status": {
+      "200": 200
+    }
+  },
+  "approxVerifyMs": {
+    "p50": 14.011,
+    "p95": 16.213
+  }
+}

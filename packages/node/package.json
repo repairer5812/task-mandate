@@ -1,0 +1,8 @@
+{
+  "name": "@task-mandate/node",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": { ".": { "types": "./src/index.ts", "default": "./src/index.ts" }, "./browser": { "types": "./src/browser.ts", "default": "./src/browser.ts" } },
+  "dependencies": { "@task-mandate/agent": "workspace:*", "@task-mandate/cli": "workspace:*", "@task-mandate/core": "workspace:*", "@task-mandate/hono": "workspace:*", "hono": "4.13.21" }
+}

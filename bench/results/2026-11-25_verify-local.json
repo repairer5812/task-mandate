@@ -1,0 +1,27 @@
+{
+  "measuredAt": "2026-11-25T00:48:13.137Z",
+  "node": "v26.13.1",
+  "cpu": "AMD Ryzen 7 9800X3D 8-Core Processor",
+  "iterations": 5000,
+  "target": "local",
+  "colo": null,
+  "unit": "ms",
+  "note": "Signatures are created before measurement. Each request has its own nonce. The time is fixed.",
+  "cases": {
+    "mandate": {
+      "p50": 0.242,
+      "p95": 0.319,
+      "p99": 0.429
+    },
+    "person": {
+      "p50": 0.357,
+      "p95": 0.459,
+      "p99": 0.592
+    },
+    "onePerPerson": {
+      "p50": 0.356,
+      "p95": 0.43,
+      "p99": 0.528
+    }
+  }
+}

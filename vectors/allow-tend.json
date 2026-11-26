@@ -1,0 +1,41 @@
+{
+  "config": {
+    "origin": "https://court.example"
+  },
+  "name": "allow-tend",
+  "now": "2026-12-01T00:00:00.000Z",
+  "route": {
+    "requireTask": {
+      "resource": "court-3",
+      "type": "reserve"
+    }
+  },
+  "steps": [
+    {
+      "expected": {
+        "actionConsumed": true,
+        "agentKeyId": "poqkLGiymh_W0uP6PZFw-dvez3QJT5SolqXBCW38r0U",
+        "decision": "allow",
+        "mandateId": "BaveXjDdZ5EPGqvV9LEnVg",
+        "principal": "urn:jwk-thumbprint:sha-256:6h6BKqIloaHGEaGcmMejjxHZt1yJdS3LdYAizj3avD8",
+        "task": {
+          "resource": "court-3",
+          "type": "reserve"
+        },
+        "taskId": "BaveXjDdZ5EPGqvV9LEnVg"
+      },
+      "request": {
+        "body": "{\"facility\":\"court-3\"}",
+        "headers": {
+          "agent-mandate": "eyJ0eXAiOiJkYytzZC1qd3QiLCJqd2siOnsia3R5IjoiT0tQIiwiY3J2IjoiRWQyNTUxOSIsIngiOiJzNGdwTThEc0Zhd0k4RERQOTdTcXNSUXFJTFZHSG05bE1CWThUNDB0em9JIn0sImFsZyI6IkVkRFNBIn0.eyJ2Y3QiOiJ1cm46dGFzay1tYW5kYXRlOnYwIiwiaXNzIjoidXJuOmp3ay10aHVtYnByaW50OnNoYS0yNTY6Nmg2QktxSWxvYUhHRWFHY21NZWpqeEhadDF5SmRTM0xkWUFpemozYXZEOCIsInN1YiI6InVybjpqd2stdGh1bWJwcmludDpzaGEtMjU2OjZoNkJLcUlsb2FIR0VhR2NtTWVqanhIWnQxeUpkUzNMZFlBaXpqM2F2RDgiLCJhdWQiOiJodHRwczovL2NvdXJ0LmV4YW1wbGUiLCJjbmYiOnsiandrIjp7Imt0eSI6Ik9LUCIsImNydiI6IkVkMjU1MTkiLCJ4IjoiSnJRTGo1UF84OWlYRVM5LXZGZ3JJeTI5Y2xGOUNDX29QUHN3M2M1RDBicyJ9fSwidGFzayI6eyJ0eXBlIjoicmVzZXJ2ZSIsInJlc291cmNlIjoiY291cnQtMyJ9LCJpYXQiOjE3OTYwODMyMDAsIm5iZiI6MTc5NjA4MzIwMCwiZXhwIjoxNzk2MDg1MDAwLCJqdGkiOiJCYXZlWGpEZFo1RVBHcXZWOUxFblZnIiwidGVuZCI6MTc5NjA5MDQwMCwibGltaXRzIjp7Im1heEFjdGlvbnMiOjJ9fQ.3XtrJa66bvxZP1Arb9RoKsimwy0WDDmnu3gyz1-RrlKAFErO974wkIE337M6JywM1JvlJ6VsRWSu6P183B17CA~",
+          "content-digest": "sha-256=:2KglvzSAatE/dVxNBOFmysbY+xWrqFwF3rYT+73Pgqg=:",
+          "content-type": "application/json",
+          "signature": "sig1=:9jxOPJYvIIS6Jeaz/A+w+mw4Gk4uRFFKJbsukDZ2lnluXRh+fc9oOB66SsN6YAHMBY9IOaJi1xmedMTo+D3wCA==:",
+          "signature-input": "sig1=(\"@authority\" \"@method\" \"@path\" \"@query\" \"agent-mandate\" \"content-digest\");created=1796083200;keyid=\"poqkLGiymh_W0uP6PZFw-dvez3QJT5SolqXBCW38r0U\";alg=\"ed25519\";expires=1796083500;nonce=\"PNyanbZrtp39qoJtILjZIKQvCgjG9zlyys7MDkvWceNnko/mK/PKS1BCmI4Jo/J+tJqbinfFMMAyQd0aOwJYtg==\";tag=\"web-bot-auth\""
+        },
+        "method": "POST",
+        "url": "https://court.example/reserve"
+      }
+    }
+  ]
+}

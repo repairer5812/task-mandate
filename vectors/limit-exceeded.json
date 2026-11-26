@@ -1,0 +1,58 @@
+{
+  "config": {
+    "origin": "https://court.example"
+  },
+  "name": "limit-exceeded",
+  "now": "2026-12-01T00:00:00.000Z",
+  "route": {
+    "requireTask": {
+      "type": "reserve"
+    }
+  },
+  "steps": [
+    {
+      "expected": {
+        "actionConsumed": true,
+        "agentKeyId": "poqkLGiymh_W0uP6PZFw-dvez3QJT5SolqXBCW38r0U",
+        "decision": "allow",
+        "mandateId": "1_AUZouEy-HqwKzk0Cg4hQ",
+        "principal": "urn:jwk-thumbprint:sha-256:6h6BKqIloaHGEaGcmMejjxHZt1yJdS3LdYAizj3avD8",
+        "task": {
+          "resource": "court-3",
+          "type": "reserve"
+        },
+        "taskId": "1_AUZouEy-HqwKzk0Cg4hQ"
+      },
+      "request": {
+        "body": "{\"facility\":\"court-3\"}",
+        "headers": {
+          "agent-mandate": "eyJ0eXAiOiJkYytzZC1qd3QiLCJqd2siOnsia3R5IjoiT0tQIiwiY3J2IjoiRWQyNTUxOSIsIngiOiJzNGdwTThEc0Zhd0k4RERQOTdTcXNSUXFJTFZHSG05bE1CWThUNDB0em9JIn0sImFsZyI6IkVkRFNBIn0.eyJ2Y3QiOiJ1cm46dGFzay1tYW5kYXRlOnYwIiwiaXNzIjoidXJuOmp3ay10aHVtYnByaW50OnNoYS0yNTY6Nmg2QktxSWxvYUhHRWFHY21NZWpqeEhadDF5SmRTM0xkWUFpemozYXZEOCIsInN1YiI6InVybjpqd2stdGh1bWJwcmludDpzaGEtMjU2OjZoNkJLcUlsb2FIR0VhR2NtTWVqanhIWnQxeUpkUzNMZFlBaXpqM2F2RDgiLCJhdWQiOiJodHRwczovL2NvdXJ0LmV4YW1wbGUiLCJjbmYiOnsiandrIjp7Imt0eSI6Ik9LUCIsImNydiI6IkVkMjU1MTkiLCJ4IjoiSnJRTGo1UF84OWlYRVM5LXZGZ3JJeTI5Y2xGOUNDX29QUHN3M2M1RDBicyJ9fSwidGFzayI6eyJ0eXBlIjoicmVzZXJ2ZSIsInJlc291cmNlIjoiY291cnQtMyJ9LCJpYXQiOjE3OTYwODMyMDAsIm5iZiI6MTc5NjA4MzIwMCwiZXhwIjoxNzk2MDg1MDAwLCJqdGkiOiIxX0FVWm91RXktSHF3S3prMENnNGhRIiwibGltaXRzIjp7Im1heEFjdGlvbnMiOjF9fQ.yq9mhiO1gW4nRiA7uOzfO3eLpf4OfTgBV0RSFO-YlhHQpLOkMUmxBIfDjrwCWRKvN2CpWk8xrj1UZKx2bRbPAA~",
+          "content-digest": "sha-256=:2KglvzSAatE/dVxNBOFmysbY+xWrqFwF3rYT+73Pgqg=:",
+          "content-type": "application/json",
+          "signature": "sig1=:xMzvFHO8GyRqo0Psqj/zzi9cj3i1smK27ovV94dB8Dcmiy0kXKopSic1quTsLO+VkGW33yURd4lKQblVdu+UAQ==:",
+          "signature-input": "sig1=(\"@authority\" \"@method\" \"@path\" \"@query\" \"agent-mandate\" \"content-digest\");created=1796083200;keyid=\"poqkLGiymh_W0uP6PZFw-dvez3QJT5SolqXBCW38r0U\";alg=\"ed25519\";expires=1796083500;nonce=\"qxsvcqybPNlkXd2NrzRV5LdWOe4OhL3t5rpI0lY1LXccZLjCHaD7o+2ed1jXebqIQ+P3cVe6VH0ANgxmtGW5og==\";tag=\"web-bot-auth\""
+        },
+        "method": "POST",
+        "url": "https://court.example/reserve"
+      }
+    },
+    {
+      "expected": {
+        "code": "LIMIT_EXCEEDED",
+        "decision": "deny"
+      },
+      "request": {
+        "body": "{\"facility\":\"court-3\"}",
+        "headers": {
+          "agent-mandate": "eyJ0eXAiOiJkYytzZC1qd3QiLCJqd2siOnsia3R5IjoiT0tQIiwiY3J2IjoiRWQyNTUxOSIsIngiOiJzNGdwTThEc0Zhd0k4RERQOTdTcXNSUXFJTFZHSG05bE1CWThUNDB0em9JIn0sImFsZyI6IkVkRFNBIn0.eyJ2Y3QiOiJ1cm46dGFzay1tYW5kYXRlOnYwIiwiaXNzIjoidXJuOmp3ay10aHVtYnByaW50OnNoYS0yNTY6Nmg2QktxSWxvYUhHRWFHY21NZWpqeEhadDF5SmRTM0xkWUFpemozYXZEOCIsInN1YiI6InVybjpqd2stdGh1bWJwcmludDpzaGEtMjU2OjZoNkJLcUlsb2FIR0VhR2NtTWVqanhIWnQxeUpkUzNMZFlBaXpqM2F2RDgiLCJhdWQiOiJodHRwczovL2NvdXJ0LmV4YW1wbGUiLCJjbmYiOnsiandrIjp7Imt0eSI6Ik9LUCIsImNydiI6IkVkMjU1MTkiLCJ4IjoiSnJRTGo1UF84OWlYRVM5LXZGZ3JJeTI5Y2xGOUNDX29QUHN3M2M1RDBicyJ9fSwidGFzayI6eyJ0eXBlIjoicmVzZXJ2ZSIsInJlc291cmNlIjoiY291cnQtMyJ9LCJpYXQiOjE3OTYwODMyMDAsIm5iZiI6MTc5NjA4MzIwMCwiZXhwIjoxNzk2MDg1MDAwLCJqdGkiOiIxX0FVWm91RXktSHF3S3prMENnNGhRIiwibGltaXRzIjp7Im1heEFjdGlvbnMiOjF9fQ.yq9mhiO1gW4nRiA7uOzfO3eLpf4OfTgBV0RSFO-YlhHQpLOkMUmxBIfDjrwCWRKvN2CpWk8xrj1UZKx2bRbPAA~",
+          "content-digest": "sha-256=:2KglvzSAatE/dVxNBOFmysbY+xWrqFwF3rYT+73Pgqg=:",
+          "content-type": "application/json",
+          "signature": "sig1=:C7Q1DIH4WX2OH23YiZ9MpHkG2cQBmw9gSTmqOuBeBWI/nEq3KpqNpnS6tq0nXzJmJJg64IaBDy2x8HIY5wKaBw==:",
+          "signature-input": "sig1=(\"@authority\" \"@method\" \"@path\" \"@query\" \"agent-mandate\" \"content-digest\");created=1796083200;keyid=\"poqkLGiymh_W0uP6PZFw-dvez3QJT5SolqXBCW38r0U\";alg=\"ed25519\";expires=1796083500;nonce=\"bmMp3vjQ7zLavazV/PQyLZ6YS7/VOrdD76uaMTtdt7g5GGzfAi4IS4HJH2gqdxyUO1R+JHbA59YrgDmKrKmS6A==\";tag=\"web-bot-auth\""
+        },
+        "method": "POST",
+        "url": "https://court.example/reserve"
+      }
+    }
+  ]
+}

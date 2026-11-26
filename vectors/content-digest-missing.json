@@ -1,0 +1,32 @@
+{
+  "config": {
+    "origin": "https://court.example"
+  },
+  "name": "content-digest-missing",
+  "now": "2026-12-01T00:00:00.000Z",
+  "route": {
+    "requireTask": {
+      "resource": "court-3",
+      "type": "reserve"
+    }
+  },
+  "steps": [
+    {
+      "expected": {
+        "code": "SIG_INVALID",
+        "decision": "deny"
+      },
+      "request": {
+        "body": "{\"facility\":\"court-3\"}",
+        "headers": {
+          "agent-mandate": "eyJ0eXAiOiJkYytzZC1qd3QiLCJqd2siOnsia3R5IjoiT0tQIiwiY3J2IjoiRWQyNTUxOSIsIngiOiJzNGdwTThEc0Zhd0k4RERQOTdTcXNSUXFJTFZHSG05bE1CWThUNDB0em9JIn0sImFsZyI6IkVkRFNBIn0.eyJ2Y3QiOiJ1cm46dGFzay1tYW5kYXRlOnYwIiwiaXNzIjoidXJuOmp3ay10aHVtYnByaW50OnNoYS0yNTY6Nmg2QktxSWxvYUhHRWFHY21NZWpqeEhadDF5SmRTM0xkWUFpemozYXZEOCIsInN1YiI6InVybjpqd2stdGh1bWJwcmludDpzaGEtMjU2OjZoNkJLcUlsb2FIR0VhR2NtTWVqanhIWnQxeUpkUzNMZFlBaXpqM2F2RDgiLCJhdWQiOiJodHRwczovL2NvdXJ0LmV4YW1wbGUiLCJjbmYiOnsiandrIjp7Imt0eSI6Ik9LUCIsImNydiI6IkVkMjU1MTkiLCJ4IjoiSnJRTGo1UF84OWlYRVM5LXZGZ3JJeTI5Y2xGOUNDX29QUHN3M2M1RDBicyJ9fSwidGFzayI6eyJ0eXBlIjoicmVzZXJ2ZSIsInJlc291cmNlIjoiY291cnQtMyJ9LCJpYXQiOjE3OTYwODMyMDAsIm5iZiI6MTc5NjA4MzIwMCwiZXhwIjoxNzk2MDg1MDAwLCJqdGkiOiJobDVmczRNTWZ5MjkyazlGUHZsY0pRIiwibGltaXRzIjp7Im1heEFjdGlvbnMiOjJ9fQ.Yn72uPeMpbAvJZTaFQUAStDoSFUJ1tN-Y6y1UcZN4d5_zjKnIkmyxhWF5KEcTu1TFAwj4XoAFHQfFjQubM7aDw~",
+          "content-type": "application/json",
+          "signature": "sig1=:FUc1qtb4GtgYPDlzjC/ksZ8mOYaorEBw5cjQyW7QD2tk3EkdbF3+2x/U+ttgn90dYQiEZosMEPDy/2/ELJEJAA==:",
+          "signature-input": "sig1=(\"@method\" \"@authority\" \"@path\" \"@query\" \"agent-mandate\");created=1796083200;expires=1796083500;keyid=\"poqkLGiymh_W0uP6PZFw-dvez3QJT5SolqXBCW38r0U\";alg=\"ed25519\";tag=\"web-bot-auth\";nonce=\"EBMNEOFaq3vAaHyi8bBUqCIR/bWToVHF2VqkdjkLyGVx+T1N4VqSCn2TF5lbEzavBicGxLKd/REGdZ4ckPCFRQ==\""
+        },
+        "method": "POST",
+        "url": "https://court.example/reserve"
+      }
+    }
+  ]
+}

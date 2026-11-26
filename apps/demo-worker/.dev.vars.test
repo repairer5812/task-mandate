@@ -1,0 +1,1 @@
+# Wrangler loads this file instead of .dev.vars for the test environment. It is empty so local RESET_TOKEN and sim secrets stay out of tests.

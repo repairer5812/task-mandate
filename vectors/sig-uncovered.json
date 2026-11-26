@@ -1,0 +1,32 @@
+{
+  "config": {
+    "origin": "https://court.example"
+  },
+  "name": "sig-uncovered",
+  "now": "2026-12-01T00:00:00.000Z",
+  "route": {
+    "requireTask": {
+      "resource": "court-3",
+      "type": "reserve"
+    }
+  },
+  "steps": [
+    {
+      "expected": {
+        "code": "SIG_INVALID",
+        "decision": "deny"
+      },
+      "request": {
+        "body": "{\"facility\":\"court-3\"}",
+        "headers": {
+          "agent-mandate": "eyJ0eXAiOiJkYytzZC1qd3QiLCJqd2siOnsia3R5IjoiT0tQIiwiY3J2IjoiRWQyNTUxOSIsIngiOiJzNGdwTThEc0Zhd0k4RERQOTdTcXNSUXFJTFZHSG05bE1CWThUNDB0em9JIn0sImFsZyI6IkVkRFNBIn0.eyJ2Y3QiOiJ1cm46dGFzay1tYW5kYXRlOnYwIiwiaXNzIjoidXJuOmp3ay10aHVtYnByaW50OnNoYS0yNTY6Nmg2QktxSWxvYUhHRWFHY21NZWpqeEhadDF5SmRTM0xkWUFpemozYXZEOCIsInN1YiI6InVybjpqd2stdGh1bWJwcmludDpzaGEtMjU2OjZoNkJLcUlsb2FIR0VhR2NtTWVqanhIWnQxeUpkUzNMZFlBaXpqM2F2RDgiLCJhdWQiOiJodHRwczovL2NvdXJ0LmV4YW1wbGUiLCJjbmYiOnsiandrIjp7Imt0eSI6Ik9LUCIsImNydiI6IkVkMjU1MTkiLCJ4IjoiSnJRTGo1UF84OWlYRVM5LXZGZ3JJeTI5Y2xGOUNDX29QUHN3M2M1RDBicyJ9fSwidGFzayI6eyJ0eXBlIjoicmVzZXJ2ZSIsInJlc291cmNlIjoiY291cnQtMyJ9LCJpYXQiOjE3OTYwODMyMDAsIm5iZiI6MTc5NjA4MzIwMCwiZXhwIjoxNzk2MDg1MDAwLCJqdGkiOiJxankyVE1wcTA4UnZER1Zqa1NaUVB3IiwibGltaXRzIjp7Im1heEFjdGlvbnMiOjJ9fQ.ys1flIZETQq-0COuHmfT198BHA67mznxUpyXpiFTasMZUCcqriFmaVD3NY9T4281C_TqJu49sFaRLmAynF9vDw~",
+          "content-type": "application/json",
+          "signature": "sig1=:U+419rwciHDJ8GVZWLhQ62Y9VWwOJJDSCCZwg4vCfY4SzyISiMulvcV5kMxC8fx+WdTvC7Os7LDtcSnNoHrCCw==:",
+          "signature-input": "sig1=(\"agent-mandate\");created=1796083200;expires=1796083500;keyid=\"poqkLGiymh_W0uP6PZFw-dvez3QJT5SolqXBCW38r0U\";alg=\"ed25519\";tag=\"web-bot-auth\";nonce=\"9RK79hpf4UwxVaN72Ns2VA1qHt/LCYzAgz3kz2PONcEdHIfGLTcofkyLi9165B+T4KTwaUr2th/mlfmF8kL8Uw==\""
+        },
+        "method": "POST",
+        "url": "https://court.example/reserve"
+      }
+    }
+  ]
+}

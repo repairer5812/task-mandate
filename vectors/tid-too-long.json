@@ -1,0 +1,33 @@
+{
+  "config": {
+    "origin": "https://court.example"
+  },
+  "name": "tid-too-long",
+  "now": "2026-12-01T00:00:00.000Z",
+  "route": {
+    "requireTask": {
+      "resource": "court-3",
+      "type": "reserve"
+    }
+  },
+  "steps": [
+    {
+      "expected": {
+        "code": "MANDATE_MALFORMED",
+        "decision": "deny"
+      },
+      "request": {
+        "body": "{\"facility\":\"court-3\"}",
+        "headers": {
+          "agent-mandate": "eyJ0eXAiOiJkYytzZC1qd3QiLCJqd2siOnsia3R5IjoiT0tQIiwiY3J2IjoiRWQyNTUxOSIsIngiOiJzNGdwTThEc0Zhd0k4RERQOTdTcXNSUXFJTFZHSG05bE1CWThUNDB0em9JIn0sImFsZyI6IkVkRFNBIn0.eyJ2Y3QiOiJ1cm46dGFzay1tYW5kYXRlOnYwIiwiaXNzIjoidXJuOmp3ay10aHVtYnByaW50OnNoYS0yNTY6Nmg2QktxSWxvYUhHRWFHY21NZWpqeEhadDF5SmRTM0xkWUFpemozYXZEOCIsInN1YiI6InVybjpqd2stdGh1bWJwcmludDpzaGEtMjU2OjZoNkJLcUlsb2FIR0VhR2NtTWVqanhIWnQxeUpkUzNMZFlBaXpqM2F2RDgiLCJhdWQiOiJodHRwczovL2NvdXJ0LmV4YW1wbGUiLCJjbmYiOnsiandrIjp7Imt0eSI6Ik9LUCIsImNydiI6IkVkMjU1MTkiLCJ4IjoiSnJRTGo1UF84OWlYRVM5LXZGZ3JJeTI5Y2xGOUNDX29QUHN3M2M1RDBicyJ9fSwidGFzayI6eyJ0eXBlIjoicmVzZXJ2ZSIsInJlc291cmNlIjoiY291cnQtMyJ9LCJpYXQiOjE3OTYwODMyMDAsIm5iZiI6MTc5NjA4MzIwMCwiZXhwIjoxNzk2MDg1MDAwLCJqdGkiOiJFZTgwWGFGRXNqblVhTjl6bFQySkh3IiwidGlkIjoidHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0dHR0IiwibGltaXRzIjp7Im1heEFjdGlvbnMiOjJ9fQ.AWkWq5V30v3pBlJKsSGVjVxyvLlUpCwPNEdyH4s4JZK0hghNxenHLoRPQK1Uptt5UUT9wPweGu5Bel1RInuQDg~",
+          "content-digest": "sha-256=:2KglvzSAatE/dVxNBOFmysbY+xWrqFwF3rYT+73Pgqg=:",
+          "content-type": "application/json",
+          "signature": "sig1=:ZQmuDyUQoEbTxNZhvEDZWjTUoe2dgRiZXRsbO0jg8n24aJ5qAxB7sWoRpQurCBTMgVtJBzon1dHAG9c6CgSlCw==:",
+          "signature-input": "sig1=(\"@authority\" \"@method\" \"@path\" \"@query\" \"agent-mandate\" \"content-digest\");created=1796083200;keyid=\"poqkLGiymh_W0uP6PZFw-dvez3QJT5SolqXBCW38r0U\";alg=\"ed25519\";expires=1796083500;nonce=\"xkapeIdIei3yOv37yhhD9aE8V6somlmA0X7b98TtMCmXKIk7W5ojJO5K7aQTJ+ooSyHjfp8R9/lr8oq/XFdYKQ==\";tag=\"web-bot-auth\""
+        },
+        "method": "POST",
+        "url": "https://court.example/reserve"
+      }
+    }
+  ]
+}

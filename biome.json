@@ -1,0 +1,12 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": true },
+  "files": {
+    "ignoreUnknown": true,
+    "includes": ["**", "!!**/node_modules", "!!**/dist", "!!**/.wrangler", "!!apps/demo-worker/public/vendor", "!!apps/demo-worker/public/js", "!!vectors", "!!lab/results", "!!bench/results", "!**/*.md", "!pnpm-lock.yaml", "!tests/acceptance*.test.ts", "!tests/store-conformance*.ts", "!docs/SPEC.md"]
+  },
+  "formatter": { "enabled": true, "indentStyle": "space", "indentWidth": 2, "lineWidth": 320, "expand": "never", "includes": ["**", "!**/*.css"] },
+  "linter": { "enabled": true, "includes": ["**", "!**/*.css"], "rules": { "preset": "recommended", "style": { "noNonNullAssertion": "off" } } },
+  "overrides": [{ "includes": ["types/vitest-shim.d.ts"], "linter": { "rules": { "suspicious": { "noExplicitAny": "off" } } } }],
+  "javascript": { "formatter": { "quoteStyle": "double", "semicolons": "always" } }
+}

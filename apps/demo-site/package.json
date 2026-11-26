@@ -1,0 +1,1 @@
+{ "name": "@task-mandate/demo-site", "version": "0.0.0", "private": true, "type": "module", "exports": { ".": "./src/app.ts" }, "dependencies": { "@task-mandate/core": "workspace:*", "@task-mandate/node": "workspace:*", "hono": "4.13.21" } }

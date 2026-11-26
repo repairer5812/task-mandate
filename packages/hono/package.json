@@ -1,0 +1,14 @@
+{
+  "name": "@task-mandate/hono",
+  "version": "0.1.0",
+  "description": "Hono verification middleware (taskMandate) and types for task-mandate.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "repository": "https://github.com/repairer5812/task-mandate",
+  "files": ["dist", "README.md", "LICENSE"],
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "scripts": { "build": "tsc -p tsconfig.build.json" },
+  "dependencies": { "@task-mandate/core": "workspace:*" },
+  "peerDependencies": { "hono": ">=4.13.21 <5" },
+  "devDependencies": { "hono": "4.13.21" }
+}

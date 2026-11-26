@@ -1,0 +1,58 @@
+name = "task-mandate-demo"
+main = "src/index.ts"
+compatibility_date = "2026-11-25"
+compatibility_flags = ["nodejs_compat"]
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+
+# Default vars are for deployment. PERSON_ISSUERS is a placeholder. The deployer fills it with --var.
+# If it stays empty, every app route returns 500: REQUIRE_PERSON needs at least one issuer.
+[vars]
+ORIGIN = "https://task-mandate-demo.repairer5812.workers.dev"
+SEATS = "{\"court-3\":1000,\"court-4\":1}"
+PERSON_ISSUERS = "[]"
+REQUIRE_PERSON = "true"
+ONE_PER_PERSON = "true"
+MIN_SWITCH_SEC = "600"
+MAX_LIFETIME_SEC = "86400"
+MAX_TASK_SEC = "86400"
+SEAT_RESET_SEC = "3600"
+
+# Tests run on loopback without a person attestation. pnpm test:worker uses this environment.
+# Bindings are not inherited by an environment, so they are written again for the test environment.
+[env.test.vars]
+ORIGIN = "http://127.0.0.1:8787"
+SEATS = "{\"court-3\":1000,\"court-4\":1}"
+PERSON_ISSUERS = "[]"
+REQUIRE_PERSON = "false"
+ONE_PER_PERSON = "false"
+MIN_SWITCH_SEC = "600"
+MAX_LIFETIME_SEC = "86400"
+MAX_TASK_SEC = "2592000"
+SEAT_RESET_SEC = "3600"
+# Used when tests call /reset. Deployment secrets are set with secret put.
+RESET_TOKEN = "test-reset"
+
+[env.test.assets]
+directory = "./public"
+binding = "ASSETS"
+run_worker_first = true
+
+[[env.test.durable_objects.bindings]]
+name = "MANDATE_STORE"
+class_name = "MandateStore"
+
+[[env.test.migrations]]
+tag = "v1"
+new_sqlite_classes = ["MandateStore"]
+
+[[durable_objects.bindings]]
+name = "MANDATE_STORE"
+class_name = "MandateStore"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["MandateStore"]

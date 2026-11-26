@@ -1,0 +1,239 @@
+{
+  "startedAt": "2026-11-26T02:50:22.239Z",
+  "finishedAt": "2026-11-26T02:50:37.517Z",
+  "elapsedMs": 15278,
+  "people": 200,
+  "seeds": 20,
+  "days": 7,
+  "sites": 3,
+  "tasks": 4900,
+  "attacks": 622,
+  "requests": 12990,
+  "allows": 8644,
+  "denies": 4346,
+  "reasons": {
+    "allow": 8644,
+    "REPLAY": 1762,
+    "SIG_INVALID": 782,
+    "SUPERSEDED": 900,
+    "KEY_MISMATCH": 20,
+    "MANDATE_MALFORMED": 40,
+    "BODY_TOO_LARGE": 20,
+    "EXPIRED": 420,
+    "LIMIT_EXCEEDED": 322,
+    "PERSON_INVALID": 40,
+    "TASK_NOT_ALLOWED": 20,
+    "NOT_YET_VALID": 20
+  },
+  "violations": [],
+  "violationCount": 0,
+  "legitimate": {
+    "replay": {
+      "REPLAY": 1742
+    },
+    "clock": {
+      "SIG_INVALID": 742
+    },
+    "person slot": {
+      "SUPERSEDED": 900
+    },
+    "expiry": {
+      "EXPIRED": 400
+    }
+  },
+  "bugCandidate": {},
+  "attackCodes": {
+    "tampered header": {
+      "SIG_INVALID": 20
+    },
+    "swapped body": {
+      "SIG_INVALID": 20
+    },
+    "stolen mandate": {
+      "KEY_MISMATCH": 20
+    },
+    "long identifier": {
+      "MANDATE_MALFORMED": 20
+    },
+    "oversized mandate": {
+      "MANDATE_MALFORMED": 20
+    },
+    "oversized body": {
+      "BODY_TOO_LARGE": 20
+    },
+    "over chunk limit": {
+      "LIMIT_EXCEEDED": 302
+    },
+    "other site": {
+      "PERSON_INVALID": 20
+    },
+    "pasted attestation": {
+      "PERSON_INVALID": 20
+    },
+    "wrong task type": {
+      "TASK_NOT_ALLOWED": 20
+    },
+    "over action limit": {
+      "LIMIT_EXCEEDED": 20
+    },
+    "just before nbf": {
+      "NOT_YET_VALID": 20
+    },
+    "replayed signature": {
+      "REPLAY": 20
+    },
+    "expiry second": {
+      "EXPIRED": 20
+    }
+  },
+  "issueRejected": {},
+  "latencyMs": {
+    "p50": 0.4820339999996577,
+    "p95": 0.7334410000000275,
+    "max": 10.422725000000355
+  },
+  "storeMax": {
+    "nonces": 7,
+    "actions": 26,
+    "people": 25
+  },
+  "storeFinal": {
+    "nonces": 0,
+    "actions": 0,
+    "people": 0
+  },
+  "perSeed": [
+    {
+      "seed": 1,
+      "elapsedMs": 891,
+      "requests": 653,
+      "violationCount": 0
+    },
+    {
+      "seed": 2,
+      "elapsedMs": 714,
+      "requests": 650,
+      "violationCount": 0
+    },
+    {
+      "seed": 3,
+      "elapsedMs": 693,
+      "requests": 648,
+      "violationCount": 0
+    },
+    {
+      "seed": 4,
+      "elapsedMs": 688,
+      "requests": 631,
+      "violationCount": 0
+    },
+    {
+      "seed": 5,
+      "elapsedMs": 677,
+      "requests": 657,
+      "violationCount": 0
+    },
+    {
+      "seed": 6,
+      "elapsedMs": 666,
+      "requests": 651,
+      "violationCount": 0
+    },
+    {
+      "seed": 7,
+      "elapsedMs": 663,
+      "requests": 666,
+      "violationCount": 0
+    },
+    {
+      "seed": 8,
+      "elapsedMs": 670,
+      "requests": 655,
+      "violationCount": 0
+    },
+    {
+      "seed": 9,
+      "elapsedMs": 653,
+      "requests": 637,
+      "violationCount": 0
+    },
+    {
+      "seed": 10,
+      "elapsedMs": 644,
+      "requests": 646,
+      "violationCount": 0
+    },
+    {
+      "seed": 11,
+      "elapsedMs": 647,
+      "requests": 654,
+      "violationCount": 0
+    },
+    {
+      "seed": 12,
+      "elapsedMs": 650,
+      "requests": 646,
+      "violationCount": 0
+    },
+    {
+      "seed": 13,
+      "elapsedMs": 672,
+      "requests": 664,
+      "violationCount": 0
+    },
+    {
+      "seed": 14,
+      "elapsedMs": 644,
+      "requests": 655,
+      "violationCount": 0
+    },
+    {
+      "seed": 15,
+      "elapsedMs": 619,
+      "requests": 629,
+      "violationCount": 0
+    },
+    {
+      "seed": 16,
+      "elapsedMs": 658,
+      "requests": 659,
+      "violationCount": 0
+    },
+    {
+      "seed": 17,
+      "elapsedMs": 687,
+      "requests": 637,
+      "violationCount": 0
+    },
+    {
+      "seed": 18,
+      "elapsedMs": 642,
+      "requests": 648,
+      "violationCount": 0
+    },
+    {
+      "seed": 19,
+      "elapsedMs": 649,
+      "requests": 654,
+      "violationCount": 0
+    },
+    {
+      "seed": 20,
+      "elapsedMs": 641,
+      "requests": 650,
+      "violationCount": 0
+    }
+  ],
+  "properties": {
+    "tamper": {
+      "runs": 1000,
+      "allowed": 0,
+      "threw": 0
+    },
+    "time": {
+      "runs": 4004,
+      "mismatches": 0,
+      "boundaryFails": []
+    }
+  }
+}

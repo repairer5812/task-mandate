@@ -1,0 +1,17 @@
+# Local wrangler dev overrides the deployment vars in wrangler.toml. Copy this file to .dev.vars.
+# Do not commit .dev.vars.
+ORIGIN=http://127.0.0.1:8787
+SEATS={"court-3":1000,"court-4":1}
+PERSON_ISSUERS=[]
+REQUIRE_PERSON=false
+ONE_PER_PERSON=false
+MIN_SWITCH_SEC=600
+MAX_LIFETIME_SEC=86400
+MAX_TASK_SEC=2592000
+SEAT_RESET_SEC=3600
+RESET_TOKEN=local-reset
+# Voice delegation. If the values are absent, that feature stays off. Deployment values are set with wrangler secret put.
+# SIM_IDP_JWK is JSON from tm idp keygen. The keys are iss, secret, and jwk.
+# SIM_IDP_JWK=
+# SIM_PRESENTER_CODE=
+# Do not put FACTCHAT_API_KEY here. Without it, only rule interpretation runs.

@@ -1,0 +1,14 @@
+{
+  "name": "@task-mandate/store-conformance",
+  "version": "0.1.0",
+  "description": "Vitest conformance test suite (defineStoreConformance) for Store implementations in task-mandate.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "repository": "https://github.com/repairer5812/task-mandate",
+  "files": ["dist", "README.md", "LICENSE"],
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "scripts": { "build": "tsc -p tsconfig.build.json" },
+  "dependencies": { "@task-mandate/core": "workspace:*" },
+  "peerDependencies": { "vitest": ">=5" },
+  "devDependencies": { "vitest": "5.1.1" }
+}

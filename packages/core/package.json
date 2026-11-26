@@ -1,0 +1,12 @@
+{
+  "name": "@task-mandate/core",
+  "version": "0.1.0",
+  "description": "Core mandate issuance, verification, person attestation helpers, chunk renewal planning, the Store interface, and memoryStore for task-mandate.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "repository": "https://github.com/repairer5812/task-mandate",
+  "files": ["dist", "README.md", "LICENSE"],
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" }, "./internal": { "types": "./dist/internal.d.ts", "import": "./dist/internal.js" } },
+  "scripts": { "build": "tsc -p tsconfig.build.json" },
+  "dependencies": { "@sd-jwt/core": "0.25.0", "@sd-jwt/sd-jwt-vc": "0.25.0", "http-message-sig": "0.3.0", "jsonwebkey-thumbprint": "0.1.0", "structured-headers": "2.0.3", "web-bot-auth": "0.2.0" }
+}

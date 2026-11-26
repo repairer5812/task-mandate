@@ -1,0 +1,30 @@
+{
+  "config": {
+    "onNoMandate": "challenge",
+    "origin": "https://court.example"
+  },
+  "name": "no-mandate",
+  "now": "2026-12-01T00:00:00.000Z",
+  "route": {
+    "requireTask": {
+      "resource": "court-3",
+      "type": "reserve"
+    }
+  },
+  "steps": [
+    {
+      "expected": {
+        "code": "NO_MANDATE",
+        "decision": "challenge"
+      },
+      "request": {
+        "body": "{\"facility\":\"court-3\"}",
+        "headers": {
+          "content-type": "application/json"
+        },
+        "method": "POST",
+        "url": "https://court.example/reserve"
+      }
+    }
+  ]
+}

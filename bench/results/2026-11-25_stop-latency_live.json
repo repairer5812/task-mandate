@@ -1,0 +1,37 @@
+{
+  "measuredAt": "2026-11-25T02:51:48.287Z",
+  "node": "v26.13.1",
+  "cpu": "AMD Ryzen 7 9800X3D 8-Core Processor",
+  "iterations": 5,
+  "target": "https://task-mandate-demo.repairer5812.workers.dev",
+  "colo": null,
+  "chunkSec": 30,
+  "clockSkewSec": 30,
+  "boundSec": 60,
+  "unit": "s",
+  "note": "Deployment run on a real clock. Requests are about 1 second apart, so an observation can be up to 1 second above the theoretical bound. The bound is chunk + clockSkewSec.",
+  "samples": [
+    {
+      "stopOffsetSec": 25.488,
+      "latencySec": 50.64
+    },
+    {
+      "stopOffsetSec": 15.748,
+      "latencySec": 59.781
+    },
+    {
+      "stopOffsetSec": 28.394,
+      "latencySec": 47.748
+    },
+    {
+      "stopOffsetSec": 10.268,
+      "latencySec": 49.789
+    },
+    {
+      "stopOffsetSec": 3.129,
+      "latencySec": 57.058
+    }
+  ],
+  "maxLatencySec": 59.781,
+  "meanLatencySec": 53.003
+}

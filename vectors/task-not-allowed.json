@@ -1,0 +1,33 @@
+{
+  "config": {
+    "origin": "https://court.example"
+  },
+  "name": "task-not-allowed",
+  "now": "2026-12-01T00:00:00.000Z",
+  "route": {
+    "requireTask": {
+      "resource": "court-3",
+      "type": "reserve"
+    }
+  },
+  "steps": [
+    {
+      "expected": {
+        "code": "TASK_NOT_ALLOWED",
+        "decision": "deny"
+      },
+      "request": {
+        "body": "{\"facility\":\"court-3\"}",
+        "headers": {
+          "agent-mandate": "eyJ0eXAiOiJkYytzZC1qd3QiLCJqd2siOnsia3R5IjoiT0tQIiwiY3J2IjoiRWQyNTUxOSIsIngiOiJzNGdwTThEc0Zhd0k4RERQOTdTcXNSUXFJTFZHSG05bE1CWThUNDB0em9JIn0sImFsZyI6IkVkRFNBIn0.eyJ2Y3QiOiJ1cm46dGFzay1tYW5kYXRlOnYwIiwiaXNzIjoidXJuOmp3ay10aHVtYnByaW50OnNoYS0yNTY6Nmg2QktxSWxvYUhHRWFHY21NZWpqeEhadDF5SmRTM0xkWUFpemozYXZEOCIsInN1YiI6InVybjpqd2stdGh1bWJwcmludDpzaGEtMjU2OjZoNkJLcUlsb2FIR0VhR2NtTWVqanhIWnQxeUpkUzNMZFlBaXpqM2F2RDgiLCJhdWQiOiJodHRwczovL2NvdXJ0LmV4YW1wbGUiLCJjbmYiOnsiandrIjp7Imt0eSI6Ik9LUCIsImNydiI6IkVkMjU1MTkiLCJ4IjoiSnJRTGo1UF84OWlYRVM5LXZGZ3JJeTI5Y2xGOUNDX29QUHN3M2M1RDBicyJ9fSwidGFzayI6eyJ0eXBlIjoibG9va3VwIiwicmVzb3VyY2UiOiJjb3VydC0zIn0sImlhdCI6MTc5NjA4MzIwMCwibmJmIjoxNzk2MDgzMjAwLCJleHAiOjE3OTYwODUwMDAsImp0aSI6IklrdHpKR2JkS1JhdjRIakUzeHRnSUEiLCJsaW1pdHMiOnsibWF4QWN0aW9ucyI6Mn19.UhcYVyacy-e9ltff12nPKkR-MQwGyaCH_5ZnH9--ccwmcBickriseWjJ7MBoYX784ApuqkxqBf8insp9AMEUBg~",
+          "content-digest": "sha-256=:2KglvzSAatE/dVxNBOFmysbY+xWrqFwF3rYT+73Pgqg=:",
+          "content-type": "application/json",
+          "signature": "sig1=:eTo3oQtPNibxXuxXgkEiROQz3uIP9AgH9sAoV4aGn8F9kzlePG/IXfpB4qzQqiXO+XOWJKjSfPFz3R99QPU3Ag==:",
+          "signature-input": "sig1=(\"@authority\" \"@method\" \"@path\" \"@query\" \"agent-mandate\" \"content-digest\");created=1796083200;keyid=\"poqkLGiymh_W0uP6PZFw-dvez3QJT5SolqXBCW38r0U\";alg=\"ed25519\";expires=1796083500;nonce=\"f20eUeo6zwiTKbid2x9EtxoeuB+hy6PlgZfvtCjokMLEKgi8S9TOiWtyNAMlk4l4O/wjX6Y1Cqz9p80q9A8AEA==\";tag=\"web-bot-auth\""
+        },
+        "method": "POST",
+        "url": "https://court.example/reserve"
+      }
+    }
+  ]
+}

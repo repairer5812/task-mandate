@@ -1,0 +1,29 @@
+{
+  "measuredAt": "2026-11-25T02:45:32.567Z",
+  "node": "v26.13.1",
+  "cpu": "AMD Ryzen 7 9800X3D 8-Core Processor",
+  "iterations": 200,
+  "intervalMs": 50,
+  "target": "https://task-mandate-demo.repairer5812.workers.dev",
+  "colo": "KIX",
+  "unit": "ms",
+  "note": "slots p50 subtracted from reserve p50 approximates time spent in verification and the store. The round trip also includes the network and serialization.",
+  "slots": {
+    "p50": 100.686,
+    "p95": 106.948,
+    "status": {
+      "200": 200
+    }
+  },
+  "reserve": {
+    "p50": 377.448,
+    "p95": 404.695,
+    "status": {
+      "200": 200
+    }
+  },
+  "approxVerifyMs": {
+    "p50": 276.762,
+    "p95": 297.747
+  }
+}

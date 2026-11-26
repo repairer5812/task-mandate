@@ -1,0 +1,10 @@
+packages:
+  - packages/*
+  - apps/*
+allowBuilds:
+  cbor-extract: true
+  esbuild: true
+  workerd: true
+minimumReleaseAgeExclude:
+  - "@cloudflare/vitest-plugin@1.9.2"
+  - miniflare@5.20261123.1-beta

@@ -1,0 +1,25 @@
+{
+  "name": "task-mandate",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.34.9",
+  "scripts": {
+    "build": "pnpm -r --filter \"./packages/*\" --if-present run build",
+    "test": "vitest run",
+    "test:worker": "pnpm --filter @task-mandate/demo-worker test",
+    "lab": "pnpm build && tsx lab/run.ts && vitest run --config lab/vitest.config.ts",
+    "lab:worker": "pnpm build && tsx lab/worker-run.ts",
+    "deploy:worker": "pnpm --filter @task-mandate/demo-worker deploy",
+    "typecheck": "tsc -b --pretty false && tsc -p apps/demo-worker/tsconfig.json --pretty false",
+    "lint": "biome check .",
+    "format": "biome format --write .",
+    "dup": "jscpd packages/core/src packages/agent/src packages/hono/src packages/cli/src packages/store-conformance/src --format typescript --reporters json --output /tmp/task-mandate-jscpd --silent && cat /tmp/task-mandate-jscpd/jscpd-report.json",
+    "vectors": "tsx scripts/gen-vectors.ts",
+    "release:check": "tsx scripts/release-check.ts",
+    "build:browser": "pnpm --filter @task-mandate/demo-worker build:browser",
+    "vendor:three": "pnpm --filter @task-mandate/demo-worker vendor:three"
+  },
+  "engines": { "node": ">=22" },
+  "devDependencies": { "@biomejs/biome": "2.6.9", "@task-mandate/demo-site": "workspace:*", "@task-mandate/store-conformance": "workspace:*", "@types/node": "26.6.6", "fast-check": "4.11.0", "jscpd": "5.4.3", "tsx": "4.23.15", "typescript": "6.0.3", "vite": "8.0.0", "vitest": "5.1.1" },
+  "dependencies": { "@task-mandate/cli": "workspace:*", "@task-mandate/core": "workspace:*", "@task-mandate/node": "workspace:*" }
+}
