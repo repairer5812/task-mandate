@@ -21,6 +21,7 @@ tsconfig.json
 tsconfig.build.json
 vitest.config.ts
 docs/*.md
+examples/agent-sandbox/*
 packages/*/*
 packages/*/src/*
 packages/*/test/*
