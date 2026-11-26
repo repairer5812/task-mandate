@@ -11,5 +11,8 @@
   "scripts": { "build": "tsc -p tsconfig.build.json" },
   "dependencies": { "@task-mandate/agent": "workspace:*", "@task-mandate/core": "workspace:*" },
   "homepage": "https://github.com/repairer5812/task-mandate#readme",
-  "bugs": { "url": "https://github.com/repairer5812/task-mandate/issues" }
+  "bugs": { "url": "https://github.com/repairer5812/task-mandate/issues" },
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=22" },
+  "keywords": ["task-mandate", "cli", "ai-agents", "authorization", "delegation", "sd-jwt", "web-bot-auth"]
 }

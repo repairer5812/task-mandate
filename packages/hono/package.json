@@ -12,5 +12,8 @@
   "peerDependencies": { "hono": ">=4.13.21 <5" },
   "devDependencies": { "hono": "4.13.21" },
   "homepage": "https://github.com/repairer5812/task-mandate#readme",
-  "bugs": { "url": "https://github.com/repairer5812/task-mandate/issues" }
+  "bugs": { "url": "https://github.com/repairer5812/task-mandate/issues" },
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=22" },
+  "keywords": ["task-mandate", "hono", "middleware", "ai-agents", "authorization", "delegation", "web-bot-auth"]
 }

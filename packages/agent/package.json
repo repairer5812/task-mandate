@@ -10,5 +10,8 @@
   "scripts": { "build": "tsc -p tsconfig.build.json" },
   "dependencies": { "@task-mandate/core": "workspace:*", "http-message-sig": "0.3.0", "web-bot-auth": "0.2.0" },
   "homepage": "https://github.com/repairer5812/task-mandate#readme",
-  "bugs": { "url": "https://github.com/repairer5812/task-mandate/issues" }
+  "bugs": { "url": "https://github.com/repairer5812/task-mandate/issues" },
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=22" },
+  "keywords": ["task-mandate", "ai-agents", "authorization", "delegation", "rfc9421", "http-message-signatures", "web-bot-auth"]
 }

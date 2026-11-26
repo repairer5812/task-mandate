@@ -12,5 +12,8 @@
   "peerDependencies": { "vitest": ">=5" },
   "devDependencies": { "vitest": "5.1.1" },
   "homepage": "https://github.com/repairer5812/task-mandate#readme",
-  "bugs": { "url": "https://github.com/repairer5812/task-mandate/issues" }
+  "bugs": { "url": "https://github.com/repairer5812/task-mandate/issues" },
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=22" },
+  "keywords": ["task-mandate", "vitest", "conformance", "store", "ai-agents", "authorization"]
 }
